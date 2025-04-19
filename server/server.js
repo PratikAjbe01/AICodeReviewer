@@ -5,11 +5,11 @@ const cors=require('cors');
 require('dotenv').config();
 app.use(express.json());
 const corsOptions = {
-    origin: ['http://localhost:5173', 'https://ai-code-reviewer-frontend-drab.vercel.app/'],
+    origin: ['http://localhost:5173', 'https://ai-code-reviewer-tau.vercel.app/'],
     credentials: true,
-    methods: ['POST'],
+    methods: ['GET', 'POST', 'OPTIONS'],
   };
-  app.use(cors(corsOptions)); // Allows ALL domains (remove later!)
+app.use(cors(corsOptions));
 const PORT=process.env.PORT||6000;
 app.get('/',(req,res)=>{
     res.send('thats working brother');
