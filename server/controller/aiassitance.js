@@ -1,6 +1,7 @@
 const express = require('express');
 const { GoogleGenAI } = require("@google/genai");
 
+ // For API calls
 const handlePrompt = async (req, res) => {
   try {
     const { code } = req.body;
